@@ -3,7 +3,7 @@ resources:
 - name: resource-tutorial
   type: git
   source:
-    uri: https://github.com/rwinch/concourse-gradle-sample.git
+    uri: https://github.com/ohadjfrog/concourse-gradle-sample.git
 
 jobs:
 - name: job-test-app
@@ -12,4 +12,4 @@ jobs:
   - get: resource-tutorial
     trigger: true
   - task: web-app-tests
-    file: resource-tutorial/ci/build.yml
+    file: resource-tutorial/gradle-examples/gradle-example/ci/build.yml
